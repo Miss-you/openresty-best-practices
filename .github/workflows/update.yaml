@@ -60,7 +60,8 @@ jobs:
         git remote add upstream https://github.com/moonbingbing/openresty-best-practices.git
         git fetch upstream 
         git checkout -b tmp-master upstream/master
-        git checkout master
+        git fetch origin
+        git checkout -b master origin/master
         git merge tmp-master
         git commit -m "Updated By Github Actions With Build ${{github.run_number}} of ${{github.workflow}} For Github Pages"
         git push "https://${TOKEN}@${REF}"

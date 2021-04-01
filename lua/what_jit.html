@@ -1,0 +1,2897 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>什么是 JIT · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../ngx/nginx.html" />
+    
+    
+    <link rel="prev" href="FFI.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    入门篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../base/web_evolution.html">
+            
+                <a href="../base/web_evolution.html">
+            
+                    
+                    Socket 编程发展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../base/intro.html">
+            
+                <a href="../base/intro.html">
+            
+                    
+                    OpenResty 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="main.html">
+            
+                <a href="main.html">
+            
+                    
+                    Lua 入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="brief.html">
+            
+                <a href="brief.html">
+            
+                    
+                    Lua 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="build_env.html">
+            
+                <a href="build_env.html">
+            
+                    
+                    Lua 环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="editor.html">
+            
+                <a href="editor.html">
+            
+                    
+                    Lua 编辑器选择
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="class.html">
+            
+                <a href="class.html">
+            
+                    
+                    基础数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="operator.html">
+            
+                <a href="operator.html">
+            
+                    
+                    表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="control_structrues.html">
+            
+                <a href="control_structrues.html">
+            
+                    
+                    控制结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="if_else.html">
+            
+                <a href="if_else.html">
+            
+                    
+                    if/else
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" data-path="while.html">
+            
+                <a href="while.html">
+            
+                    
+                    while
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.3" data-path="repeat.html">
+            
+                <a href="repeat.html">
+            
+                    
+                    repeat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.4" data-path="for.html">
+            
+                <a href="for.html">
+            
+                    
+                    for
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.5" data-path="break.html">
+            
+                <a href="break.html">
+            
+                    
+                    break，return 和 goto
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="function_descrip.html">
+            
+                <a href="function_descrip.html">
+            
+                    
+                    Lua 函数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.7.1" data-path="function_define.html">
+            
+                <a href="function_define.html">
+            
+                    
+                    函数的定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.2" data-path="function_parameter.html">
+            
+                <a href="function_parameter.html">
+            
+                    
+                    函数的参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.3" data-path="function_result.html">
+            
+                <a href="function_result.html">
+            
+                    
+                    函数返回值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.4" data-path="call_user_func_array.html">
+            
+                <a href="call_user_func_array.html">
+            
+                    
+                    全动态函数调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="module.html">
+            
+                <a href="module.html">
+            
+                    
+                    模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="string_library.html">
+            
+                <a href="string_library.html">
+            
+                    
+                    String 库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="table_library.html">
+            
+                <a href="table_library.html">
+            
+                    
+                    Table 库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="time_date_function.html">
+            
+                <a href="time_date_function.html">
+            
+                    
+                    日期时间函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="math_library.html">
+            
+                <a href="math_library.html">
+            
+                    
+                    数学库函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="file.html">
+            
+                <a href="file.html">
+            
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Lua 高阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="metatable.html">
+            
+                <a href="metatable.html">
+            
+                    
+                    元表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="object_oriented.html">
+            
+                <a href="object_oriented.html">
+            
+                    
+                    面向对象编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="local.html">
+            
+                <a href="local.html">
+            
+                    
+                    局部变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="array_size.html">
+            
+                <a href="array_size.html">
+            
+                    
+                    判断数组大小
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="not_nil.html">
+            
+                <a href="not_nil.html">
+            
+                    
+                    非空判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="re.html">
+            
+                <a href="re.html">
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="dummy_var.html">
+            
+                <a href="dummy_var.html">
+            
+                    
+                    虚变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="not_use_module.html">
+            
+                <a href="not_use_module.html">
+            
+                    
+                    抵制使用 module() 定义模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="function_before_use.html">
+            
+                <a href="function_before_use.html">
+            
+                    
+                    调用代码前先定义函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="dot_diff.html">
+            
+                <a href="dot_diff.html">
+            
+                    
+                    点号与冒号操作符的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="module_is_evil.html">
+            
+                <a href="module_is_evil.html">
+            
+                    
+                    module 是邪恶的
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="FFI.html">
+            
+                <a href="FFI.html">
+            
+                    
+                    FFI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.13" data-path="what_jit.html">
+            
+                <a href="what_jit.html">
+            
+                    
+                    什么是 JIT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../ngx/nginx.html">
+            
+                <a href="../ngx/nginx.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../ngx/nginx_brief.html">
+            
+                <a href="../ngx/nginx_brief.html">
+            
+                    
+                    Nginx 新手起步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../ngx/nginx_local_pcre.html">
+            
+                <a href="../ngx/nginx_local_pcre.html">
+            
+                    
+                    location 匹配规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../ngx/static_file.html">
+            
+                <a href="../ngx/static_file.html">
+            
+                    
+                    静态文件服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../ngx/nginx_log.html">
+            
+                <a href="../ngx/nginx_log.html">
+            
+                    
+                    日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../ngx/reverse_proxy.html">
+            
+                <a href="../ngx/reverse_proxy.html">
+            
+                    
+                    反向代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../ngx/balancer.html">
+            
+                <a href="../ngx/balancer.html">
+            
+                    
+                    负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../ngx/pitfalls_and_common_mistakes.html">
+            
+                <a href="../ngx/pitfalls_and_common_mistakes.html">
+            
+                    
+                    陷阱和常见错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    OpenResty
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../openresty/install.html">
+            
+                <a href="../openresty/install.html">
+            
+                    
+                    环境搭建
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../openresty/install_on_windows.html">
+            
+                <a href="../openresty/install_on_windows.html">
+            
+                    
+                    Windows 平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../openresty/install_on_centos.html">
+            
+                <a href="../openresty/install_on_centos.html">
+            
+                    
+                    CentOS 平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../openresty/install_on_ubuntu.html">
+            
+                <a href="../openresty/install_on_ubuntu.html">
+            
+                    
+                    Ubuntu 平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="../openresty/install_osx.html">
+            
+                <a href="../openresty/install_osx.html">
+            
+                    
+                    Mac OS X 平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../openresty/helloworld.html">
+            
+                <a href="../openresty/helloworld.html">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../openresty/work_with_location.html">
+            
+                <a href="../openresty/work_with_location.html">
+            
+                    
+                    与其他 location 配合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../openresty/get_url_param.html">
+            
+                <a href="../openresty/get_url_param.html">
+            
+                    
+                    获取 uri 参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../openresty/get_req_body.html">
+            
+                <a href="../openresty/get_req_body.html">
+            
+                    
+                    获取请求 body
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../openresty/response.html">
+            
+                <a href="../openresty/response.html">
+            
+                    
+                    输出响应体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../openresty/log_response.html">
+            
+                <a href="../openresty/log_response.html">
+            
+                    
+                    日志输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../openresty/simple_api.html">
+            
+                <a href="../openresty/simple_api.html">
+            
+                    
+                    简单 API Server 框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../openresty/inline_var.html">
+            
+                <a href="../openresty/inline_var.html">
+            
+                    
+                    使用 Nginx 内置绑定变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../openresty/sub_request.html">
+            
+                <a href="../openresty/sub_request.html">
+            
+                    
+                    子查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../openresty/share_var.html">
+            
+                <a href="../openresty/share_var.html">
+            
+                    
+                    不同阶段共享变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../openresty/safe_sql.html">
+            
+                <a href="../openresty/safe_sql.html">
+            
+                    
+                    防止 SQL 注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../openresty/how_request_http.html">
+            
+                <a href="../openresty/how_request_http.html">
+            
+                    
+                    如何发起新 HTTP 请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../openresty/bit_brief.html">
+            
+                <a href="../openresty/bit_brief.html">
+            
+                    
+                    如何完成 bit 操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.14.1" data-path="../openresty/bit_two's_complement.html">
+            
+                <a href="../openresty/bit_two's_complement.html">
+            
+                    
+                    一，复习二进制补码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14.2" data-path="../openresty/bit_operations_review.html">
+            
+                <a href="../openresty/bit_operations_review.html">
+            
+                    
+                    二，复习位运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14.3" data-path="../openresty/bit_LuaJIT_BitOp_Api.html">
+            
+                <a href="../openresty/bit_LuaJIT_BitOp_Api.html">
+            
+                    
+                    三，LuaJIT 和 Lua BitOp Api
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14.4" data-path="../openresty/bit_bitwise_operation_example.html">
+            
+                <a href="../openresty/bit_bitwise_operation_example.html">
+            
+                    
+                    四，位运算算法实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14.5" data-path="../openresty/bit_bitop_installation.html">
+            
+                <a href="../openresty/bit_bitop_installation.html">
+            
+                    
+                    五，Lua BitOp 的安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    LuaRestyRedisLibrary
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../redis/auth_connect.html">
+            
+                <a href="../redis/auth_connect.html">
+            
+                    
+                    访问有授权验证的 Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../redis/select-keeplive.html">
+            
+                <a href="../redis/select-keeplive.html">
+            
+                    
+                    select+set_keepalive 组合操作引起的数据读写错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../redis/out_package.html">
+            
+                <a href="../redis/out_package.html">
+            
+                    
+                    redis 接口的二次封装（简化建连、拆连等细节）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../redis/pub_sub_package.html">
+            
+                <a href="../redis/pub_sub_package.html">
+            
+                    
+                    redis 接口的二次封装（发布订阅）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../redis/pipeline.html">
+            
+                <a href="../redis/pipeline.html">
+            
+                    
+                    pipeline 压缩请求数量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../redis/script.html">
+            
+                <a href="../redis/script.html">
+            
+                    
+                    script 压缩复杂请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../redis/dynamic_redis_module_method.html">
+            
+                <a href="../redis/dynamic_redis_module_method.html">
+            
+                    
+                    动态生成的 lua-resty-redis 模块方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../json.html">
+            
+                <a href="../json.html">
+            
+                    
+                    LuaCjsonLibrary
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../json/parse_exception.html">
+            
+                <a href="../json/parse_exception.html">
+            
+                    
+                    json 解析的异常捕获
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../json/sparse_array.html">
+            
+                <a href="../json/sparse_array.html">
+            
+                    
+                    稀疏数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../json/array_or_object.html">
+            
+                <a href="../json/array_or_object.html">
+            
+                    
+                    空 table 编码为 array 还是 object
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../postgres.html">
+            
+                <a href="../postgres.html">
+            
+                    
+                    PostgresNginxModule
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../postgres/how_to_use.html">
+            
+                <a href="../postgres/how_to_use.html">
+            
+                    
+                    调用方式简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../postgres/not_support_transaction.html">
+            
+                <a href="../postgres/not_support_transaction.html">
+            
+                    
+                    不支持事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../postgres/timeout.html">
+            
+                <a href="../postgres/timeout.html">
+            
+                    
+                    超时
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../postgres/health_check.html">
+            
+                <a href="../postgres/health_check.html">
+            
+                    
+                    健康监测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../postgres/sql_inject.html">
+            
+                <a href="../postgres/sql_inject.html">
+            
+                    
+                    SQL 注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../ngx_lua.html">
+            
+                <a href="../ngx_lua.html">
+            
+                    
+                    LuaNginxModule
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../ngx_lua/phase.html">
+            
+                <a href="../ngx_lua/phase.html">
+            
+                    
+                    执行阶段概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../ngx_lua/log.html">
+            
+                <a href="../ngx_lua/log.html">
+            
+                    
+                    正确的记录日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../ngx_lua/hot_load.html">
+            
+                <a href="../ngx_lua/hot_load.html">
+            
+                    
+                    热装载代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../ngx_lua/block_io.html">
+            
+                <a href="../ngx_lua/block_io.html">
+            
+                    
+                    阻塞操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../ngx_lua/cache.html">
+            
+                <a href="../ngx_lua/cache.html">
+            
+                    
+                    缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../ngx_lua/sleep.html">
+            
+                <a href="../ngx_lua/sleep.html">
+            
+                    
+                    sleep
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../ngx_lua/timer.html">
+            
+                <a href="../ngx_lua/timer.html">
+            
+                    
+                    定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../ngx_lua/allow_deny.html">
+            
+                <a href="../ngx_lua/allow_deny.html">
+            
+                    
+                    禁止某些终端访问
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../ngx_lua/continue_after_eof.html">
+            
+                <a href="../ngx_lua/continue_after_eof.html">
+            
+                    
+                    请求返回后继续执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.10" data-path="../ngx_lua/debug.html">
+            
+                <a href="../ngx_lua/debug.html">
+            
+                    
+                    调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="../ngx_lua/on_abort.html">
+            
+                <a href="../ngx_lua/on_abort.html">
+            
+                    
+                    请求中断后的处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.12" data-path="../ngx_lua/lua_opt.html">
+            
+                <a href="../ngx_lua/lua_opt.html">
+            
+                    
+                    我的 lua 代码需要调优么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.13" data-path="../ngx_lua/lua-variable-scope.html">
+            
+                <a href="../ngx_lua/lua-variable-scope.html">
+            
+                    
+                    变量的共享范围
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.14" data-path="../ngx_lua/lua-limit.html">
+            
+                <a href="../ngx_lua/lua-limit.html">
+            
+                    
+                    动态限速
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.15" data-path="../ngx_lua/shared_get_keys.html">
+            
+                <a href="../ngx_lua/shared_get_keys.html">
+            
+                    
+                    shared.dict 非队列性质
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.16" data-path="../ngx_lua/keepalive.html">
+            
+                <a href="../ngx_lua/keepalive.html">
+            
+                    
+                    正确使用长链接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.17" data-path="../ngx_lua/how_use_third_lib.html">
+            
+                <a href="../ngx_lua/how_use_third_lib.html">
+            
+                    
+                    如何引用第三方 resty 库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.18" data-path="../ngx_lua/use_case.html">
+            
+                <a href="../ngx_lua/use_case.html">
+            
+                    
+                    典型应用场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.19" data-path="../ngx_lua/whats_cosocket.html">
+            
+                <a href="../ngx_lua/whats_cosocket.html">
+            
+                    
+                    怎样理解 cosocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.20" data-path="../ngx_lua/how_one_instance_time.html">
+            
+                <a href="../ngx_lua/how_one_instance_time.html">
+            
+                    
+                    如何安全启动唯一实例的 timer 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.21" data-path="../ngx_lua/resolve_the_domain_name.html">
+            
+                <a href="../ngx_lua/resolve_the_domain_name.html">
+            
+                    
+                    如何正确的解析域名
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../dns/main.html">
+            
+                <a href="../dns/main.html">
+            
+                    
+                    LuaRestyDNSLibrary
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../dns/use_dynamic_dns.html">
+            
+                <a href="../dns/use_dynamic_dns.html">
+            
+                    
+                    使用动态 DNS 来完成 HTTP 请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../lock.html">
+            
+                <a href="../lock.html">
+            
+                    
+                    LuaRestyLock
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../lock/cache-miss-storm.html">
+            
+                <a href="../lock/cache-miss-storm.html">
+            
+                    
+                    缓存失效风暴
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <span>
+            
+                    
+                    OpenResty 与 SSL
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../ssl/introduction.html">
+            
+                <a href="../ssl/introduction.html">
+            
+                    
+                    HTTPS 时代
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../ssl/certificate.html">
+            
+                <a href="../ssl/certificate.html">
+            
+                    
+                    动态加载证书和 OCSP stapling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../ssl/session_resumption.html">
+            
+                <a href="../ssl/session_resumption.html">
+            
+                    
+                    TLS session resumption
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../test.html">
+            
+                <a href="../test.html">
+            
+                    
+                    测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../test/static_analysis.html">
+            
+                <a href="../test/static_analysis.html">
+            
+                    
+                    代码静态分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../test/unittest.html">
+            
+                <a href="../test/unittest.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../test/coverage.html">
+            
+                <a href="../test/coverage.html">
+            
+                    
+                    代码覆盖率
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../test/apitest.html">
+            
+                <a href="../test/apitest.html">
+            
+                    
+                    API 测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="../test/performance_test.html">
+            
+                <a href="../test/performance_test.html">
+            
+                    
+                    性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="../test/ci.html">
+            
+                <a href="../test/ci.html">
+            
+                    
+                    持续集成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" data-path="../test/abtest.html">
+            
+                <a href="../test/abtest.html">
+            
+                    
+                    灰度发布
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.7.1" data-path="../test/1.md">
+            
+                <span>
+            
+                    
+                    分流引擎设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7.2" data-path="../test/2.md">
+            
+                <span>
+            
+                    
+                    控制台开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7.3" data-path="../test/3.md">
+            
+                <span>
+            
+                    
+                    向运维平台发展
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../web.html">
+            
+                <a href="../web.html">
+            
+                    
+                    Web 服务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../web/api.html">
+            
+                <a href="../web/api.html">
+            
+                    
+                    API 的设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../web/check_data_valid.html">
+            
+                <a href="../web/check_data_valid.html">
+            
+                    
+                    数据合法性检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../web/switch_protocol.html">
+            
+                <a href="../web/switch_protocol.html">
+            
+                    
+                    协议无痛升级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../web/code_style.html">
+            
+                <a href="../web/code_style.html">
+            
+                    
+                    代码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../web/conn_pool.html">
+            
+                <a href="../web/conn_pool.html">
+            
+                    
+                    连接池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../web/c10k.html">
+            
+                <a href="../web/c10k.html">
+            
+                    
+                    C10K 编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../web/time_wait.html">
+            
+                <a href="../web/time_wait.html">
+            
+                    
+                    TIME_WAIT 问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.8" data-path="../web/docker.html">
+            
+                <a href="../web/docker.html">
+            
+                    
+                    与 Docker 使用的网络瓶颈
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../flame_graph.html">
+            
+                <a href="../flame_graph.html">
+            
+                    
+                    火焰图
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../flame_graph/what.html">
+            
+                <a href="../flame_graph/what.html">
+            
+                    
+                    什么是火焰图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../flame_graph/when.html">
+            
+                <a href="../flame_graph/when.html">
+            
+                    
+                    什么时候使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../flame_graph/install.html">
+            
+                <a href="../flame_graph/install.html">
+            
+                    
+                    如何安装火焰图生成工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../flame_graph/how.html">
+            
+                <a href="../flame_graph/how.html">
+            
+                    
+                    如何定位问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../flame_graph/other.html">
+            
+                <a href="../flame_graph/other.html">
+            
+                    
+                    拓展阅读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../flame_graph/faq.html">
+            
+                <a href="../flame_graph/faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >什么是 JIT</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4EC0;&#x4E48;&#x662F;-jit&#xFF1F;">&#x4EC0;&#x4E48;&#x662F; JIT&#xFF1F;</h1>
+<p>&#x81EA;&#x4ECE; OpenResty 1.5.8.1 &#x7248;&#x672C;&#x4E4B;&#x540E;&#xFF0C;&#x9ED8;&#x8BA4;&#x6346;&#x7ED1;&#x7684; Lua &#x89E3;&#x91CA;&#x5668;&#x5C31;&#x88AB;&#x66FF;&#x6362;&#x6210;&#x4E86; LuaJIT&#xFF0C;&#x800C;&#x4E0D;&#x518D;&#x662F;&#x6807;&#x51C6; Lua&#x3002;&#x5355;&#x4ECE;&#x540D;&#x5B57;&#x4E0A;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x770B;&#x5230;&#x8FD9;&#x4E2A;&#x65B0;&#x7684;&#x89E3;&#x91CA;&#x5668;&#x591A;&#x4E86;&#x4E00;&#x4E2A; <code>JIT</code>&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x5C31;&#x4E00;&#x8D77;&#x6765;&#x804A;&#x804A; <code>JIT</code>&#x3002;</p>
+<p>&#x5148;&#x770B;&#x4E00;&#x4E0B; LuaJIT &#x5B98;&#x65B9;&#x7684;&#x89E3;&#x91CA;&#xFF1A;LuaJIT is a Just-In-Time Compiler for the Lua programming language&#x3002;</p>
+<h3 id="luajit-&#x5DE5;&#x4F5C;&#x539F;&#x7406;">LuaJIT &#x5DE5;&#x4F5C;&#x539F;&#x7406;</h3>
+<h4 id="1&#x3001;-luajit-&#x7684;&#x7EC4;&#x6210;">1&#x3001; LuaJIT &#x7684;&#x7EC4;&#x6210;</h4>
+<p>LuaJIT &#x7684;&#x8FD0;&#x884C;&#x65F6;&#x73AF;&#x5883;&#x5305;&#x62EC;&#x4E00;&#x4E2A;&#x7528; <strong>&#x624B;&#x5199;&#x6C47;&#x7F16;&#x5B9E;&#x73B0;&#x7684; Lua &#x89E3;&#x91CA;&#x5668;</strong> &#x548C;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5; <strong>&#x76F4;&#x63A5;&#x751F;&#x6210;&#x673A;&#x5668;&#x4EE3;&#x7801;&#x7684; JIT &#x7F16;&#x8BD1;&#x5668;</strong> &#x3002;</p>
+<h4 id="2&#x3001;-&#x5DE5;&#x4F5C;&#x539F;&#x7406;">2&#x3001; &#x5DE5;&#x4F5C;&#x539F;&#x7406;</h4>
+<ul>
+<li>1&#x3001;Lua &#x4EE3;&#x7801;&#x5728;&#x88AB;&#x6267;&#x884C;&#x4E4B;&#x524D;&#x603B;&#x662F;&#x4F1A;&#x5148;&#x88AB; lfn &#x6210; LuaJIT &#x81EA;&#x5DF1;&#x5B9A;&#x4E49;&#x7684; <strong>&#x5B57;&#x8282;&#x7801;&#xFF08;Byte Code&#xFF09;</strong>&#x3002;
+&#x5173;&#x4E8E; LuaJIT &#x5B57;&#x8282;&#x7801;&#x7684;&#x6587;&#x6863;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x89C1;&#xFF1A;<a href="http://wiki.luajit.org/Bytecode-2.0" target="_blank">http://wiki.luajit.org/Bytecode-2.0</a>&#xFF08;&#x8FD9;&#x4E2A;&#x6587;&#x6863;&#x63CF;&#x8FF0;&#x7684;&#x662F; LuaJIT 2.0 &#x7684;&#x5B57;&#x8282;&#x7801;&#xFF0C;&#x4E0D;&#x8FC7; 2.1 &#x91CC;&#x9762;&#x7684;&#x53D8;&#x5316;&#x5E76;&#x4E0D;&#x7B97;&#x592A;&#x5927;&#xFF09;&#x3002;</li>
+</ul>
+<ul>
+<li><p>2&#x3001;&#x4E00;&#x5F00;&#x59CB;&#x7684;&#x65F6;&#x5019;&#xFF0C;Lua &#x5B57;&#x8282;&#x7801;&#x603B;&#x662F;&#x88AB; LuaJIT &#x7684;&#x89E3;&#x91CA;&#x5668; <strong>&#x89E3;&#x91CA;&#x6267;&#x884C;</strong>&#x3002;</p>
+<ul>
+<li>LuaJIT &#x7684;&#x89E3;&#x91CA;&#x5668;&#x4F1A;&#x5728;&#x6267;&#x884C;&#x5B57;&#x8282;&#x7801;&#x7684;&#x540C;&#x65F6;&#x8BB0;&#x5F55;&#x4E00;&#x4E9B;&#x8FD0;&#x884C;&#x65F6;&#x7684;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#xFF0C;&#x6BD4;&#x5982;&#x6BCF;&#x4E2A; Lua &#x51FD;&#x6570;&#x8C03;&#x7528;&#x5165;&#x53E3;&#x7684;&#x5B9E;&#x9645;&#x8FD0;&#x884C;&#x6B21;&#x6570;&#xFF0C;&#x8FD8;&#x6709;&#x6BCF;&#x4E2A; Lua &#x5FAA;&#x73AF;&#x7684;&#x5B9E;&#x9645;&#x6267;&#x884C;&#x6B21;&#x6570;&#x3002;</li>
+<li>&#x5F53;&#x8FD9;&#x4E9B;&#x6B21;&#x6570;&#x8D85;&#x8FC7;&#x67D0;&#x4E2A;&#x9884;&#x8BBE;&#x7684;&#x9608;&#x503C;&#x65F6;&#xFF0C;&#x4FBF;&#x8BA4;&#x4E3A;&#x5BF9;&#x5E94;&#x7684; Lua &#x51FD;&#x6570;&#x5165;&#x53E3;&#x6216;&#x8005;&#x5BF9;&#x5E94;&#x7684; Lua &#x5FAA;&#x73AF; <strong>&#x8DB3;&#x591F;&#x7684;&#x201C;&#x70ED;&#x201D;</strong>&#xFF0C;&#x8FD9;&#x65F6;&#x4FBF;&#x4F1A; <strong>&#x89E6;&#x53D1; JIT &#x7F16;&#x8BD1;&#x5668;&#x5F00;&#x59CB;&#x5DE5;&#x4F5C;</strong>&#x3002;</li>
+</ul>
+</li>
+<li><p>3&#x3001; <code>JIT</code> &#x7F16;&#x8BD1;&#x5668;&#x4F1A;&#x4ECE; <strong>&#x70ED;&#x51FD;&#x6570;</strong> &#x7684;&#x5165;&#x53E3;&#x6216;&#x8005; <strong>&#x70ED;&#x5FAA;&#x73AF;</strong> &#x7684;&#x67D0;&#x4E2A;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x5C1D;&#x8BD5;&#x7F16;&#x8BD1;&#x5BF9;&#x5E94;&#x7684; Lua &#x4EE3;&#x7801;&#x8DEF;&#x5F84;&#x3002; &#x7F16;&#x8BD1;&#x7684;&#x8FC7;&#x7A0B;&#x662F;&#xFF1A;</p>
+<ul>
+<li>&#x9996;&#x5148;&#xFF0C;&#x628A; LuaJIT <strong>&#x5B57;&#x8282;&#x7801;</strong> &#x8F6C;&#x6362;&#x6210; LuaJIT &#x81EA;&#x5DF1;&#x5B9A;&#x4E49;&#x7684; <strong>&#x4E2D;&#x95F4;&#x7801;&#xFF08;IR&#xFF09;</strong>&#xFF1B;</li>
+<li>&#x7136;&#x540E;&#xFF0C;&#x518D;&#x751F;&#x6210;&#x9488;&#x5BF9;&#x76EE;&#x6807;&#x4F53;&#x7CFB;&#x7ED3;&#x6784;&#x7684; <strong>&#x673A;&#x5668;&#x7801;</strong>&#xFF08;&#x6BD4;&#x5982; x86_64 &#x6307;&#x4EE4;&#x7EC4;&#x6210;&#x7684;&#x673A;&#x5668;&#x7801;&#xFF09;&#x3002;</li>
+</ul>
+</li>
+<li><p>4&#x3001; &#x5982;&#x679C;&#x5F53;&#x524D; Lua &#x4EE3;&#x7801;&#x8DEF;&#x5F84;&#x4E0A;&#x7684;&#x6240;&#x6709;&#x7684;&#x64CD;&#x4F5C;&#x90FD;&#x53EF;&#x4EE5;&#x88AB; JIT &#x7F16;&#x8BD1;&#x5668;&#x987A;&#x5229;&#x7F16;&#x8BD1;&#xFF0C;&#x5219;&#x8FD9;&#x6761;&#x7F16;&#x8BD1;&#x8FC7;&#x7684;&#x4EE3;&#x7801;&#x8DEF;&#x5F84;&#x4FBF;&#x88AB;&#x79F0;&#x4E3A;&#x4E00;&#x4E2A; <strong><code>trace</code></strong>&#xFF0C;&#x5728;&#x7269;&#x7406;&#x4E0A;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A; <code>trace</code> &#x7C7B;&#x578B;&#x7684; GC &#x5BF9;&#x8C61;&#xFF08;&#x5373;&#x53C2;&#x4E0E; Lua GC &#x7684;&#x5BF9;&#x8C61;&#xFF09;&#x3002;</p>
+</li>
+</ul>
+<h3 id="&#x5DE5;&#x5177;&#x548C;&#x5185;&#x90E8;&#x5BF9;&#x8C61;&#x7ED3;&#x6784;">&#x5DE5;&#x5177;&#x548C;&#x5185;&#x90E8;&#x5BF9;&#x8C61;&#x7ED3;&#x6784;</h3>
+<h4 id="1&#x3001;-&#x67E5;&#x770B;&#x5DE5;&#x5177;&#x548C;&#x5185;&#x5BB9;&#x89E3;&#x6790;">1&#x3001; &#x67E5;&#x770B;&#x5DE5;&#x5177;&#x548C;&#x5185;&#x5BB9;&#x89E3;&#x6790;</h4>
+<ul>
+<li><p>1&#x3001; &#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>ngx-lj-gc-objs</code> &#x5DE5;&#x5177;&#x770B;&#x5230;&#x6307;&#x5B9A;&#x7684; Nginx worker &#x8FDB;&#x7A0B;&#x91CC;&#x6240;&#x6709; <code>trace</code> &#x5BF9;&#x8C61;&#x7684;&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x7684;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#xFF0C;&#x89C1; <a href="https://github.com/openresty/stapxx#ngx-lj-gc-objs" target="_blank">https://github.com/openresty/stapxx#ngx-lj-gc-objs</a></p>
+</li>
+<li><p>2&#x3001; &#x6BD4;&#x5982;&#x4E0B;&#x9762;&#x8FD9;&#x4E00;&#x884C; <code>ngx-lj-gc-objs</code> &#x5DE5;&#x5177;&#x7684;&#x8F93;&#x51FA;&#xFF1A;</p>
+<pre><code>  102 trace objects: max=928, avg=337, min=160, sum=34468 (in bytes)
+</code></pre><p>  &#x8F93;&#x51FA;&#x5185;&#x5BB9;&#x8868;&#x660E;&#xFF1A;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x5185;&#x7684; LuaJIT VM &#x91CC;&#x4E00;&#x5171;&#x6709; 102 &#x4E2A; <code>trace</code> &#x7C7B;&#x578B;&#x7684; GC &#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x4E2D;&#x6700;&#x5C0F;&#x7684; <code>trace</code> &#x5360;&#x7528; 160 &#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x6700;&#x5927;&#x7684;&#x5360;&#x7528; 928 &#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x5E73;&#x5747;&#x5927;&#x5C0F;&#x662F; 337 &#x5B57;&#x8282;&#xFF0C;&#x800C;&#x6240;&#x6709; <code>trace</code> &#x7684;&#x603B;&#x5927;&#x5C0F;&#x662F; 34468 &#x4E2A;&#x5B57;&#x8282;&#x3002;</p>
+</li>
+</ul>
+<h4 id="2&#x3001;-&#x4E0D;&#x8DB3;&#x4E4B;&#x5904;">2&#x3001; &#x4E0D;&#x8DB3;&#x4E4B;&#x5904;</h4>
+<p>LuaJIT &#x7684; <code>JIT</code> &#x7F16;&#x8BD1;&#x5668;&#x7684;&#x5B9E;&#x73B0;&#x76EE;&#x524D;&#x8FD8;&#x4E0D;&#x5B8C;&#x6574;&#xFF0C;&#x6709;&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x539F;&#x8BED;&#x5B83;&#x8FD8;&#x65E0;&#x6CD5;&#x7F16;&#x8BD1;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;</p>
+<ul>
+<li><code>pairs()</code> &#x51FD;&#x6570;</li>
+<li><code>unpack()</code> &#x51FD;&#x6570;</li>
+<li><code>string.match()</code> &#x51FD;&#x6570;</li>
+<li>&#x57FA;&#x4E8E; <code>lua_CFunction</code> &#x5B9E;&#x73B0;&#x7684; Lua C &#x6A21;&#x5757;</li>
+<li>FNEW &#x5B57;&#x8282;&#x7801;&#xFF0C;&#x7B49;&#x7B49;&#x3002;</li>
+</ul>
+<p>&#x6240;&#x4EE5;&#x5F53; <code>JIT</code> &#x7F16;&#x8BD1;&#x5668;&#x5728;&#x5F53;&#x524D;&#x4EE3;&#x7801;&#x8DEF;&#x5F84;&#x4E0A;&#x9047;&#x5230;&#x4E86;&#x5B83;&#x4E0D;&#x652F;&#x6301;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4FBF;&#x4F1A;&#x7ACB;&#x5373;&#x7EC8;&#x6B62;&#x5F53;&#x524D;&#x7684; <code>trace</code> &#x7F16;&#x8BD1;&#x8FC7;&#x7A0B;&#xFF08;&#x8FD9;&#x88AB;&#x79F0;&#x4E3A; <code>trace abort</code>&#xFF09;&#xFF0C;&#x800C;&#x91CD;&#x65B0;&#x9000;&#x56DE;&#x5230;&#x89E3;&#x91CA;&#x5668;&#x6A21;&#x5F0F;&#x3002;</p>
+<p>JIT &#x7F16;&#x8BD1;&#x5668;&#x4E0D;&#x652F;&#x6301;&#x7684;&#x539F;&#x8BED;&#x88AB;&#x79F0;&#x4E3A; NYI&#xFF08;Not Yet Implemented&#xFF09;&#x539F;&#x8BED;&#x3002;&#x6BD4;&#x8F83;&#x5B8C;&#x6574;&#x7684; NYI &#x5217;&#x8868;&#x5728;&#x8FD9;&#x7BC7;&#x6587;&#x6863;&#x91CC;&#x9762;&#xFF1A;<a href="http://wiki.luajit.org/NYI" target="_blank">http://wiki.luajit.org/NYI</a></p>
+<h4 id="3&#x3001;&#x5982;&#x4F55;&#x907F;&#x5751;">3&#x3001;&#x5982;&#x4F55;&#x907F;&#x5751;</h4>
+<p>&#x6240;&#x8C13; <strong>&#x8BA9;&#x66F4;&#x591A;&#x7684; Lua &#x4EE3;&#x7801;&#x88AB; <code>JIT</code> &#x7F16;&#x8BD1;</strong>&#xFF0C;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x5E2E;&#x52A9;&#x66F4;&#x591A;&#x7684; Lua &#x4EE3;&#x7801;&#x8DEF;&#x5F84;&#x80FD;&#x4E3A; <code>JIT</code> &#x7F16;&#x8BD1;&#x5668;&#x6240;&#x63A5;&#x53D7;&#x3002;&#x8FD9;&#x4E00;&#x822C;&#x901A;&#x8FC7;&#x4E24;&#x79CD;&#x9014;&#x5F84;&#x6765;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<ul>
+<li>1&#x3001; &#x8C03;&#x6574;&#x5BF9;&#x5E94;&#x7684; Lua &#x4EE3;&#x7801;&#xFF0C;&#x907F;&#x514D;&#x4F7F;&#x7528; NYI &#x539F;&#x8BED;&#x3002;</li>
+<li>2&#x3001; &#x589E;&#x5F3A; <code>JIT</code> &#x7F16;&#x8BD1;&#x5668;&#xFF0C;&#x8BA9;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#x7684; NYI &#x539F;&#x8BED;&#x80FD;&#x591F;&#x88AB;&#x7F16;&#x8BD1;&#x3002;</li>
+</ul>
+<p>&#x5BF9;&#x4E8E;&#x7B2C; 2 &#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x6625;&#x54E5;&#x4E00;&#x76F4;&#x5728;&#x63A8;&#x52A8;&#x516C;&#x53F8;&#xFF08;CloudFlare&#xFF09;&#x8D5E;&#x52A9; Mike Pall &#x7684;&#x5F00;&#x53D1;&#x5DE5;&#x4F5C;&#x3002; &#x4E0D;&#x8FC7;&#x6709;&#x4E9B;&#x539F;&#x8BED;&#x56E0;&#x4E3A;&#x672C;&#x8EAB;&#x7684;&#x4EE3;&#x4EF7;&#x8FC7;&#x9AD8;&#xFF0C;&#x800C;&#x6C38;&#x8FDC;&#x4E0D;&#x4F1A;&#x88AB;&#x7F16;&#x8BD1;&#xFF0C;&#x6BD4;&#x5982;&#x57FA;&#x4E8E;&#x7ECF;&#x5178;&#x7684; <code>lua_CFunction</code> &#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x7684; Lua C &#x6A21;&#x5757;&#xFF08;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x5C3D;&#x91CF;&#x901A;&#x8FC7; LuaJIT &#x7684; FFI &#x6765;&#x8C03;&#x7528; C&#xFF09;&#x3002;</p>
+<p>&#x800C;&#x5BF9;&#x4E8E;&#x7B2C; 1 &#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x6211;&#x4EEC;&#x5982;&#x4F55;&#x624D;&#x80FD;&#x77E5;&#x9053;&#x5177;&#x4F53;&#x662F;&#x54EA;&#x4E00;&#x884C; Lua &#x4EE3;&#x7801;&#x4E0A;&#x7684;&#x54EA;&#x4E00;&#x4E2A; NYI &#x539F;&#x8BED;&#x7EC8;&#x6B62;&#x4E86; <code>trace</code> &#x7F16;&#x8BD1;&#x5462;&#xFF1F;</p>
+<p>&#x7B54;&#x6848;&#x5F88;&#x7B80;&#x5355;&#x3002;&#x5C31;&#x662F;&#x4F7F;&#x7528; LuaJIT &#x5B89;&#x88C5;&#x81EA;&#x5E26;&#x7684; <code>jit.v</code> &#x548C; <code>jit.dump</code> &#x8FD9;&#x4E24;&#x4E2A; Lua &#x6A21;&#x5757;&#x3002;&#x8FD9;&#x4E24;&#x4E2A; Lua &#x6A21;&#x5757;&#x4F1A;&#x6253;&#x5370;&#x51FA; <code>JIT</code> &#x7F16;&#x8BD1;&#x5668;&#x5DE5;&#x4F5C;&#x7684;&#x7EC6;&#x8282;&#x8FC7;&#x7A0B;&#x3002;</p>
+<h4 id="4&#x3001;&#x5B9E;&#x4F8B;&#x5206;&#x6790;">4&#x3001;&#x5B9E;&#x4F8B;&#x5206;&#x6790;</h4>
+<p>&#x5728; Nginx &#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728; <code>nginx.conf</code> &#x6587;&#x4EF6;&#x4E2D;&#x7684; <code>http {}</code> &#x914D;&#x7F6E;&#x5757;&#x4E2D;&#x6DFB;&#x52A0;&#x4E0B;&#x9762;&#x8FD9;&#x4E00;&#x6BB5;&#xFF1A;</p>
+<pre><code>init_by_lua_block {
+    local verbose = false
+    if verbose then
+        local dump = require(&quot;jit.dump&quot;)
+        dump.on(nil, &quot;/tmp/jit.log&quot;)
+    else
+        local v = require(&quot;jit.v&quot;)
+        v.on(&quot;/tmp/jit.log&quot;)
+    end
+
+    require(&quot;resty.core&quot;)
+}
+</code></pre><p>&#x90A3;&#x4E00;&#x884C; <code>require(&quot;resty.core&quot;)</code> &#x5012;&#x5E76;&#x4E0D;&#x662F;&#x5FC5;&#x9700;&#x7684;&#xFF0C;&#x653E;&#x5728;&#x90A3;&#x91CC;&#x7684;&#x4E3B;&#x8981;&#x76EE;&#x7684;&#x662F;&#x4E3A;&#x4E86;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x4F7F;&#x7528; <code>ngx_lua</code> &#x6A21;&#x5757;&#x81EA;&#x5DF1;&#x7684;&#x57FA;&#x4E8E; <code>lua_CFunction</code> &#x7684; Lua API&#xFF0C;&#x51CF;&#x5C11; NYI &#x539F;&#x8BED;&#x3002;</p>
+<p>&#x5728;&#x4E0A;&#x9762;&#x8FD9;&#x6BB5; Lua &#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0B;&#x5206;&#x4E3A;&#x5982;&#x4E0B;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#xFF1A;</p>
+<ul>
+<li>&#x5F53; <code>verbose</code> &#x53D8;&#x91CF;&#x4E3A; <code>false</code> &#x65F6;&#xFF08;&#x9ED8;&#x8BA4;&#x5C31;&#x4E3A; <code>false</code> &#x54C8;&#xFF09;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528; <code>jit.v</code> &#x6A21;&#x5757;&#x6253;&#x5370;&#x51FA;&#x6BD4;&#x8F83;&#x7B80;&#x7565;&#x7684;&#x6D41;&#x6C34;&#x4FE1;&#x606F;&#x5230; <code>/tmp/jit.log</code> &#x6587;&#x4EF6;&#x4E2D;&#xFF1B;</li>
+<li>&#x800C;&#x5F53; <code>verbose</code> &#x53D8;&#x91CF;&#x4E3A; <code>true</code> &#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5219;&#x4F7F;&#x7528; <code>jit.dump</code> &#x6A21;&#x5757;&#x6253;&#x5370;&#x6240;&#x6709;&#x7684;&#x7EC6;&#x8282;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;&#x6BCF;&#x4E2A; <code>trace</code> &#x5185;&#x90E8;&#x7684;&#x5B57;&#x8282;&#x7801;&#x3001;IR &#x7801;&#x548C;&#x6700;&#x7EC8;&#x751F;&#x6210;&#x7684;&#x673A;&#x5668;&#x6307;&#x4EE4;&#x3002;</li>
+</ul>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4E3B;&#x8981;&#x4EE5; <code>jit.v</code> &#x6A21;&#x5757;&#x4E3A;&#x4F8B;&#x3002; &#x5728;&#x542F;&#x52A8; Nginx &#x4E4B;&#x540E;&#xFF0C;&#x5E94;&#x5F53;&#x4F7F;&#x7528; <code>ab</code> &#x548C; <code>weighttp</code> &#x8FD9;&#x6837;&#x7684;&#x5DE5;&#x5177;&#x5BF9;&#x76F8;&#x5E94;&#x7684;&#x670D;&#x52A1;&#x63A5;&#x53E3;&#x8FDB;&#x884C;&#x9884;&#x70ED;&#xFF0C;&#x4EE5;&#x89E6;&#x53D1; LuaJIT &#x7684; <code>JIT</code> &#x7F16;&#x8BD1;&#x5668;&#x5F00;&#x59CB;&#x5DE5;&#x4F5C;&#xFF08;&#x8FD8;&#x8BB0;&#x5F97;&#x521A;&#x624D;&#x6211;&#x4EEC;&#x8BF4;&#x7684; <strong>&#x201C;&#x70ED;&#x51FD;&#x6570;&#x201D;</strong> &#x548C; <strong>&#x201C;&#x70ED;&#x5FAA;&#x73AF;&#x201D;</strong> &#x5417;&#xFF1F;&#xFF09;&#x3002;
+&#x9884;&#x70ED;&#x8FC7;&#x7A0B;&#x4E00;&#x822C;&#x4E0D;&#x7528;&#x592A;&#x4E45;&#xFF0C;&#x8DD1;&#x4E2A;&#x4E8C;&#x4E09;&#x767E;&#x4E2A;&#x8BF7;&#x6C42;&#x8DB3;&#x77E3;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x538B;&#x66F4;&#x591A;&#x7684;&#x8BF7;&#x6C42;&#x4E5F;&#x6CA1;&#x5173;&#x7CFB;&#x3002;&#x5B8C;&#x4E8B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x68C0;&#x67E5; <code>/tmp/jit.log</code> &#x6587;&#x4EF6;&#x91CC;&#x9762;&#x7684;&#x8F93;&#x51FA;&#x4E86;&#x3002;</p>
+<p><code>jit.v</code> &#x6A21;&#x5757;&#x7684;&#x8F93;&#x51FA;&#x91CC;&#x5982;&#x679C;&#x6709;&#x7C7B;&#x4F3C;&#x4E0B;&#x9762;&#x8FD9;&#x79CD;&#x5E26;&#x7F16;&#x53F7;&#x7684; TRACE &#x884C;&#xFF0C;&#x5219;&#x8868;&#x793A;&#x6210;&#x529F;&#x7F16;&#x8BD1;&#x4E86;&#x7684; <code>trace</code> &#x5BF9;&#x8C61;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<ul>
+<li><p>1&#x3001;&#x5355;&#x884C;&#x7684;</p>
+<pre><code>  [TRACE   6 shdict.lua:126 return]
+</code></pre><p>  &#x89E3;&#x6790;&#xFF1A;&#x8FD9;&#x4E2A; <code>trace</code> &#x5BF9;&#x8C61;&#x7F16;&#x53F7;&#x4E3A; 6&#xFF0C;&#x5BF9;&#x5E94;&#x7684; Lua &#x4EE3;&#x7801;&#x8DEF;&#x5F84;&#x662F;&#x4ECE; <code>shdict.lua</code> &#x6587;&#x4EF6;&#x7684;&#x7B2C; 126 &#x884C;&#x5F00;&#x59CB;&#x7684;&#x3002;</p>
+</li>
+<li><p>2&#x3001;&#x5173;&#x8054;&#x7684;
+  &#x4E0B;&#x9762;&#x8FD9;&#x6837;&#x7684;&#x4E5F;&#x662F;&#x6210;&#x529F;&#x7F16;&#x8BD1;&#x4E86;&#x7684; <code>trace</code>:</p>
+<pre><code>  [TRACE  16 (15/1) waf-core.lua:419 -&gt; 15]
+</code></pre><p>  &#x89E3;&#x6790;&#xFF1A;&#x8FD9;&#x4E2A; <code>trace</code> &#x7F16;&#x53F7;&#x4E3A; 16&#xFF0C;&#x662F;&#x4ECE; <code>waf-core.lua</code> &#x6587;&#x4EF6;&#x7684;&#x7B2C; 419 &#x884C;&#x5F00;&#x59CB;&#x7684;&#xFF0C;&#x540C;&#x65F6;&#x5B83;&#x548C;&#x7F16;&#x53F7;&#x4E3A; 15 &#x7684; <code>trace</code> &#x8054;&#x63A5;&#x4E86;&#x8D77;&#x6765;&#x3002;</p>
+</li>
+<li><p>3&#x3001;&#x88AB;&#x4E2D;&#x65AD;&#x7684;
+  &#x800C;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x5219;&#x662F;&#x88AB;&#x4E2D;&#x65AD;&#x7684; <code>trace</code>:</p>
+<pre><code>  [TRACE --- waf-core.lua:455 -- NYI: FastFunc pairs at waf-core.lua:458]
+</code></pre><p>  &#x89E3;&#x6790;&#xFF1A;&#x4E0A;&#x9762;&#x8FD9;&#x4E00;&#x884C;&#x662F;&#x8BF4;&#xFF0C;&#x8FD9;&#x4E2A; <code>trace</code> &#x662F;&#x4ECE; <code>waf-core.lua</code> &#x6587;&#x4EF6;&#x7684;&#x7B2C; 455 &#x884C;&#x5F00;&#x59CB;&#x7F16;&#x8BD1;&#x7684;&#xFF0C;&#x4F46;&#x5F53;&#x7F16;&#x8BD1;&#x5230; <code>waf-core.lua</code> &#x6587;&#x4EF6;&#x7684;&#x7B2C; 458 &#x884C;&#x65F6;&#xFF0C;&#x9047;&#x5230;&#x4E86;&#x4E00;&#x4E2A; NYI &#x539F;&#x8BED;&#x7F16;&#x8BD1;&#x4E0D;&#x4E86;&#xFF0C;&#x5373; <code>pairs()</code> &#x8FD9;&#x4E2A;&#x5185;&#x5EFA;&#x51FD;&#x6570;&#xFF0C;&#x4E8E;&#x662F;&#x5F53;&#x524D;&#x7684; <code>trace</code> &#x7F16;&#x8BD1;&#x8FC7;&#x7A0B;&#x88AB;&#x8FEB;&#x7EC8;&#x6B62;&#x4E86;&#x3002;</p>
+<p>  &#x7C7B;&#x4F3C;&#x7684;&#x4F8B;&#x5B50;&#x8FD8;&#x6709;&#x4E0B;&#x9762;&#x8FD9;&#x4E9B;&#xFF1A;</p>
+<pre><code>  [TRACE --- exit.lua:27 -- NYI: FastFunc coroutine.yield at waf-core.lua:439]
+  [TRACE --- waf.lua:321 -- NYI: bytecode 51 at raven.lua:107]
+</code></pre><p>  &#x89E3;&#x6790;&#xFF1A;&#x4E0A;&#x9762;&#x7B2C;&#x4E8C;&#x884C;&#x662F;&#x56E0;&#x4E3A;&#x64CD;&#x4F5C;&#x7801; 51 &#x7684; LuaJIT &#x5B57;&#x8282;&#x7801;&#x4E5F;&#x662F; NYI &#x539F;&#x8BED;&#xFF0C;&#x7F16;&#x8BD1;&#x4E0D;&#x4E86;&#x3002;</p>
+</li>
+</ul>
+<h4 id="5&#x3001;-&#x63A2;&#x67E5;&#x5B57;&#x8282;&#x7801;&#x7684;&#x5DE5;&#x5177;">5&#x3001; &#x63A2;&#x67E5;&#x5B57;&#x8282;&#x7801;&#x7684;&#x5DE5;&#x5177;</h4>
+<p>&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5982;&#x4F55;&#x77E5;&#x9053; 51 &#x5B57;&#x8282;&#x7801;&#x7A76;&#x7ADF;&#x662F;&#x5565;&#x5462;&#xFF1F;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528; <code>nginx-devel-utils</code> &#x9879;&#x76EE;&#x4E2D;&#x7684; <code>ljbc.lua</code> &#x811A;&#x672C;&#x6765;&#x53D6;&#x5F97; 51 &#x53F7;&#x5B57;&#x8282;&#x7801;&#x7684;&#x540D;&#x5B57;&#xFF1A;</p>
+<pre><code># /usr/local/openresty/luajit/bin/luajit-2.1.0-alpha ljbc.lua 51
+opcode 51:
+FNEW
+</code></pre><p>&#x6211;&#x4EEC;&#x770B;&#x5230;&#x539F;&#x6765;&#x662F;&#x7528;&#x6765;&#xFF08;&#x52A8;&#x6001;&#xFF09;&#x521B;&#x5EFA; Lua &#x51FD;&#x6570;&#x7684; FNEW &#x5B57;&#x8282;&#x7801;&#x3002;</p>
+<p><code>ljbc.lua</code> &#x811A;&#x672C;&#x7684;&#x4F4D;&#x7F6E;&#x662F;&#xFF1A;</p>
+<pre><code>https://github.com/agentzh/nginx-devel-utils/blob/master/ljbc.lua
+</code></pre><p>&#x975E;&#x5E38;&#x7B80;&#x5355;&#x7684;&#x4E00;&#x4E2A;&#x811A;&#x672C;&#xFF0C;&#x5C31;&#x51E0;&#x884C; Lua &#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x63D0;&#x9192;&#x7684;&#x662F;&#xFF0C;&#x4E0D;&#x540C;&#x7248;&#x672C;&#x7684; LuaJIT &#x7684;&#x5B57;&#x8282;&#x7801;&#x53EF;&#x80FD;&#x662F;&#x4E0D;&#x76F8;&#x540C;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x4E00;&#x5B9A;&#x8981;&#x4F7F;&#x7528;&#x548C;&#x4F60;&#x7684; Nginx &#x94FE;&#x63A5;&#x7684;&#x540C;&#x4E00;&#x4E2A; LuaJIT &#x6765;&#x8FD0;&#x884C;&#x8FD9;&#x4E2A; <code>ljbc.lua</code> &#x5DE5;&#x5177;&#xFF0C;&#x5426;&#x5219;&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x5F97;&#x5230;&#x9519;&#x8BEF;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<h4 id="6&#x3001;&#x5BF9;&#x6BD4;&#x5B9E;&#x9A8C;">6&#x3001;&#x5BF9;&#x6BD4;&#x5B9E;&#x9A8C;</h4>
+<p>&#x6211;&#x4EEC;&#x5B9E;&#x9645;&#x505A;&#x4E2A;&#x5BF9;&#x6BD4;&#x5B9E;&#x9A8C;&#xFF0C;&#x770B;&#x770B; <code>JIT</code> &#x5E26;&#x6765;&#x7684;&#x597D;&#x5904;&#xFF1A;</p>
+<pre><code class="lang-shell"># cat test.lua
+local s = [[aaaaaabbbbbbbcccccccccccddddddddddddeeeeeeeeeeeee
+fffffffffffffffffggggggggggggggaaaaaaaaaaabbbbbbbbbbbbbb
+ccccccccccclllll]]
+
+for i=1,10000 do
+    for j=1,10000 do
+        string.find(s, &quot;ll&quot;, 1, true)
+    end
+end
+
+# time luajit test.lua
+5.19s user
+0.03s system
+96% cpu
+5.392 total
+
+#  time lua test.lua
+9.20s user
+0.02s system
+99% cpu
+9.270 total
+</code></pre>
+<p>&#x672C;&#x4F8B;&#x5B50;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6548;&#x7387;&#x76F8;&#x5DEE;&#x5927;&#x7EA6; 9.2/5.19 &#x2248; 1.77 &#x500D;&#xFF0C;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#x6807;&#x51C6; Lua &#x9700;&#x8981; 177% &#x7684;&#x65F6;&#x95F4;&#x624D;&#x80FD;&#x5B8C;&#x6210;&#x540C;&#x6837;&#x7684;&#x5DE5;&#x4F5C;&#x3002;&#x4F30;&#x8BA1;&#x5927;&#x5BB6;&#x89C9;&#x5F97;&#x8FD9;&#x4E2A;&#x8FD8;&#x4E0D;&#x8FC7;&#x763E;&#xFF0C;&#x518D;&#x770B;&#x4E0B;&#x9762;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<blockquote>
+<p>&#x6587;&#x4EF6; test.lua&#xFF1A;</p>
+</blockquote>
+<pre><code class="lang-lua">
+<span class="hljs-keyword">local</span> loop_count = <span class="hljs-built_in">tonumber</span>(arg[<span class="hljs-number">1</span>])
+<span class="hljs-keyword">local</span> fun_pair = <span class="hljs-string">&quot;ipairs&quot;</span> == arg[<span class="hljs-number">2</span>] <span class="hljs-keyword">and</span> <span class="hljs-built_in">ipairs</span> <span class="hljs-keyword">or</span> <span class="hljs-built_in">pairs</span>
+
+<span class="hljs-keyword">local</span> t = {}
+<span class="hljs-keyword">for</span> i=<span class="hljs-number">1</span>,<span class="hljs-number">100</span> <span class="hljs-keyword">do</span>
+    t[i] = i
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">for</span> i=<span class="hljs-number">1</span>,loop_count <span class="hljs-keyword">do</span>
+    <span class="hljs-keyword">for</span> j=<span class="hljs-number">1</span>,<span class="hljs-number">1000</span> <span class="hljs-keyword">do</span>
+        <span class="hljs-keyword">for</span> k,v <span class="hljs-keyword">in</span> fun_pair(t) <span class="hljs-keyword">do</span>
+            <span class="hljs-comment">--</span>
+        <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x6267;&#x884C;&#x53C2;&#x6570;</th>
+<th style="text-align:left">&#x6267;&#x884C;&#x7ED3;&#x679C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><font color="Darkorange">(&#x4E0B;&#x9762;&#x4E09;&#x884C;&#x662F; ipairs &#x6D4B;&#x8BD5;&#x7ED3;&#x679C;)</font></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">time <font color="red">lua</font> test.lua 1000 <font color="Darkorange">ipairs</font></td>
+<td style="text-align:left"><font color="red">3.96s</font>  user 0.02s  system  98%  cpu  <font color="red">4.039</font>  total</td>
+</tr>
+<tr>
+<td style="text-align:left">time <font color="blue">luajit</font> test.lua 1000 <font color="Darkorange">ipairs</font></td>
+<td style="text-align:left"><font color="blue">0.10s</font>  user 0.00s  system  95%  cpu  <font color="blue">0.113</font>  total</td>
+</tr>
+<tr>
+<td style="text-align:left">time <font color="blue">luajit</font> test.lua 10000 <font color="Darkorange">ipairs</font></td>
+<td style="text-align:left"><font color="blue">0.98s</font>  user 0.00s  system  99%  cpu  <font color="blue">0.991</font>  total</td>
+</tr>
+<tr>
+<td style="text-align:left"><font color="DarkGoldenRod">(&#x4E0B;&#x9762;&#x4E24;&#x884C;&#x662F; pairs &#x6D4B;&#x8BD5;&#x7ED3;&#x679C;)</font></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">time <font color="red">lua</font> test.lua 1000 <font color="DarkGoldenRod">pairs</font></td>
+<td style="text-align:left"><font color="red">3.97s</font>  user 0.01s  system 99%  cpu  <font color="red">3.992</font>  total</td>
+</tr>
+<tr>
+<td style="text-align:left">time <font color="blue">luajit</font> test.lua 1000 <font color="DarkGoldenRod">pairs</font></td>
+<td style="text-align:left"><font color="blue">1.54s</font>  user 0.01s  system 99%  cpu  <font color="blue">1.559</font>  total</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4ECE;&#x8FD9;&#x4E2A;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x4E2D;&#xFF0C;&#x5927;&#x81F4;&#x53EF;&#x4EE5;&#x603B;&#x7ED3;&#x51FA;&#x4E0B;&#x9762;&#x51E0;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x5728;&#x6807;&#x51C6; Lua &#x89E3;&#x91CA;&#x5668;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528; <code>ipairs</code> &#x6216; <code>pairs</code> <strong>&#x6CA1;&#x6709;&#x533A;&#x522B;</strong>&#xFF1B;</li>
+<li>&#x5BF9;&#x4E8E; <code>pairs</code> &#x65B9;&#x5F0F;&#xFF0C;LuaJIT &#x7684;&#x6027;&#x80FD;&#x5927;&#x7EA6;&#x662F;&#x6807;&#x51C6; Lua &#x7684; <strong>4 &#x500D;</strong>&#xFF1B;</li>
+<li>&#x5BF9;&#x4E8E; <code>ipairs</code> &#x65B9;&#x5F0F;&#xFF0C;LuaJIT &#x7684;&#x6027;&#x80FD;&#x5927;&#x7EA6;&#x662F;&#x6807;&#x51C6; Lua &#x7684; <strong>40 &#x500D;</strong>&#x3002;</li>
+</ul>
+<h3 id="&#x53EF;&#x4EE5;&#x88AB;-jit-&#x7F16;&#x8BD1;&#x7684;&#x5143;&#x64CD;&#x4F5C;">&#x53EF;&#x4EE5;&#x88AB; JIT &#x7F16;&#x8BD1;&#x7684;&#x5143;&#x64CD;&#x4F5C;</h3>
+<p>&#x4E0B;&#x9762;&#x7ED9;&#x5927;&#x5BB6;&#x5217;&#x4E00;&#x4E0B;&#x622A;&#x6B62;&#x5230;&#x76EE;&#x524D;&#x5DF2;&#x7ECF;&#x53EF;&#x4EE5;&#x88AB; JIT &#x7F16;&#x8BD1;&#x7684;&#x5143;&#x64CD;&#x4F5C;&#x3002;
+&#x5176;&#x4ED6;&#x8FD8;&#x6709; IO&#x3001;Bit&#x3001;FFI&#x3001;Coroutine&#x3001;OS&#x3001;Package&#x3001;Debug&#x3001;JIT &#x7B49;&#x5206;&#x7C7B;&#xFF0C;&#x4F7F;&#x7528;&#x9891;&#x7387;&#x76F8;&#x5BF9;&#x8F83;&#x4F4E;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x7F57;&#x5217;&#x4E86;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5B98;&#x7F51;&#xFF1A;<a href="http://wiki.luajit.org/NYI" target="_blank">http://wiki.luajit.org/NYI</a>&#x3002;</p>
+<h4 id="&#x57FA;&#x7840;&#x5E93;&#x7684;&#x652F;&#x6301;&#x60C5;&#x51B5;">&#x57FA;&#x7840;&#x5E93;&#x7684;&#x652F;&#x6301;&#x60C5;&#x51B5;</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x51FD;&#x6570;</th>
+<th style="text-align:left">&#x7F16;&#x8BD1;?</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">assert</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><font color="red">collectgarbage</font></td>
+<td style="text-align:left"><font color="red">no</font></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><font color="Blue">dofile</font></td>
+<td style="text-align:left"><font color="Blue">never</font></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><font color="Blue">error</font></td>
+<td style="text-align:left"><font color="Blue">never</font></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">getfenv</td>
+<td style="text-align:left">2.1 partial</td>
+<td style="text-align:left">&#x53EA;&#x6709; getfenv(0) &#x80FD;&#x7F16;&#x8BD1;</td>
+</tr>
+<tr>
+<td style="text-align:left">getmetatable</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">ipairs</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><font color="Blue">load</font></td>
+<td style="text-align:left"><font color="Blue">never</font></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><font color="Blue">loadfile</font></td>
+<td style="text-align:left"><font color="Blue">never</font></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><font color="Blue">loadstring</font></td>
+<td style="text-align:left"><font color="Blue">never</font></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><font color="red">next</font></td>
+<td style="text-align:left"><font color="red">no</font></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><font color="red">pairs</font></td>
+<td style="text-align:left"><font color="red">no</font></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">pcall</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><font color="red">print</font></td>
+<td style="text-align:left"><font color="red">no</font></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">rawequal</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">rawget</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">rawlen (5.2)</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">rawset</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">select</td>
+<td style="text-align:left">partial</td>
+<td style="text-align:left">&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x9759;&#x6001;&#x53D8;&#x91CF;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x7F16;&#x8BD1;</td>
+</tr>
+<tr>
+<td style="text-align:left"><font color="red">setfenv</font></td>
+<td style="text-align:left"><font color="red">no</font></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">setmetatable</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">tonumber</td>
+<td style="text-align:left">partial</td>
+<td style="text-align:left">&#x4E0D;&#x80FD;&#x7F16;&#x8BD1;&#x975E;10&#x8FDB;&#x5236;&#xFF0C;&#x975E;&#x9884;&#x671F;&#x7684;&#x5F02;&#x5E38;&#x8F93;&#x5165;</td>
+</tr>
+<tr>
+<td style="text-align:left">tostring</td>
+<td style="text-align:left">partial</td>
+<td style="text-align:left">&#x53EA;&#x80FD;&#x7F16;&#x8BD1;&#xFF1A;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x6570;&#x5B57;&#x3001;&#x5E03;&#x5C14;&#x3001;nil &#x4EE5;&#x53CA;&#x652F;&#x6301; __tostring&#x5143;&#x65B9;&#x6CD5;&#x7684;&#x7C7B;&#x578B;</td>
+</tr>
+<tr>
+<td style="text-align:left">type</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><font color="red">unpack</font></td>
+<td style="text-align:left"><font color="red">no</font></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">xpcall</td>
+<td style="text-align:left">yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x5B57;&#x7B26;&#x4E32;&#x5E93;">&#x5B57;&#x7B26;&#x4E32;&#x5E93;</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x51FD;&#x6570;</th>
+<th style="text-align:left">&#x7F16;&#x8BD1;?</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">string.byte</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">string.char</td>
+<td style="text-align:left">2.1</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><font color="Blue">string.dump</font></td>
+<td style="text-align:left"><font color="Blue">never</font></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">string.find</td>
+<td style="text-align:left">2.1 partial</td>
+<td style="text-align:left">&#x53EA;&#x6709;&#x5B57;&#x7B26;&#x4E32;&#x6837;&#x5F0F;&#x67E5;&#x627E;&#xFF08;&#x6CA1;&#x6709;&#x6837;&#x5F0F;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">string.format</td>
+<td style="text-align:left">2.1 partial</td>
+<td style="text-align:left">&#x4E0D;&#x652F;&#x6301; %p &#x6216; &#x975E;&#x5B57;&#x7B26;&#x4E32;&#x53C2;&#x6570;&#x7684; %s</td>
+</tr>
+<tr>
+<td style="text-align:left"><font color="red">string.gmatch</font></td>
+<td style="text-align:left"><font color="red">no</font></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><font color="red">string.gsub</font></td>
+<td style="text-align:left"><font color="red">no</font></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">string.len</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">string.lower</td>
+<td style="text-align:left">2.1</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><font color="red">string.match</font></td>
+<td style="text-align:left"><font color="red">no</font></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">string.rep</td>
+<td style="text-align:left">2.1</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">string.reverse</td>
+<td style="text-align:left">2.1</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">string.sub</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">string.upper</td>
+<td style="text-align:left">2.1</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x8868;">&#x8868;</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x51FD;&#x6570;</th>
+<th style="text-align:left">&#x7F16;&#x8BD1;?</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">table.concat</td>
+<td style="text-align:left">2.1</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><font color="red">table.foreach</font></td>
+<td style="text-align:left"><font color="red">no</font></td>
+<td style="text-align:left">2.1: &#x5185;&#x90E8;&#x7F16;&#x8BD1;&#xFF0C;&#x4F46;&#x8FD8;&#x6CA1;&#x6709;&#x5916;&#x653E;</td>
+</tr>
+<tr>
+<td style="text-align:left">table.foreachi</td>
+<td style="text-align:left">2.1</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">table.getn</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">table.insert</td>
+<td style="text-align:left">partial</td>
+<td style="text-align:left">&#x53EA;&#x6709; push &#x64CD;&#x4F5C;</td>
+</tr>
+<tr>
+<td style="text-align:left"><font color="red">table.maxn</font></td>
+<td style="text-align:left"><font color="red">no</font></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><font color="red">table.pack</font> (5.2)</td>
+<td style="text-align:left"><font color="red">no</font></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">table.remove</td>
+<td style="text-align:left">2.1</td>
+<td style="text-align:left">&#x90E8;&#x5206;&#xFF0C;&#x53EA;&#x6709; pop &#x64CD;&#x4F5C;</td>
+</tr>
+<tr>
+<td style="text-align:left"><font color="red">table.sort</font></td>
+<td style="text-align:left"><font color="red">no</font></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><font color="red">table.unpack</font> (5.2)</td>
+<td style="text-align:left"><font color="red">no</font></td>
+</tr>
+</tbody>
+</table>
+<h4 id="math-&#x5E93;">math &#x5E93;</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x51FD;&#x6570;</th>
+<th style="text-align:left">&#x7F16;&#x8BD1;?</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">math.abs</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">math.acos</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">math.asin</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">math.atan</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">math.atan2</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">math.ceil</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">math.cos</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">math.cosh</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">math.deg</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">math.exp</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">math.floor</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><font color="red">math.fmod</font></td>
+<td style="text-align:left"><font color="red">no</font></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><font color="red">math.frexp</font></td>
+<td style="text-align:left"><font color="red">no</font></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">math.ldexp</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">math.log</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">math.log10</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">math.max</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">math.min</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">math.modf</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">math.pow</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">math.rad</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">math.random</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><font color="red">math.randomseed</font></td>
+<td style="text-align:left"><font color="red">no</font></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">math.sin</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">math.sinh</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">math.sqrt</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">math.tan</td>
+<td style="text-align:left">yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">math.tanh</td>
+<td style="text-align:left">yes</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="FFI.html" class="navigation navigation-prev " aria-label="Previous page: FFI">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../ngx/nginx.html" class="navigation navigation-next " aria-label="Next page: Nginx">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"什么是 JIT","level":"1.4.13","depth":2,"next":{"title":"Nginx","level":"1.5","depth":1,"path":"ngx/nginx.md","ref":"ngx/nginx.md","articles":[{"title":"Nginx 新手起步","level":"1.5.1","depth":2,"path":"ngx/nginx_brief.md","ref":"ngx/nginx_brief.md","articles":[]},{"title":"location 匹配规则","level":"1.5.2","depth":2,"path":"ngx/nginx_local_pcre.md","ref":"ngx/nginx_local_pcre.md","articles":[]},{"title":"静态文件服务","level":"1.5.3","depth":2,"path":"ngx/static_file.md","ref":"ngx/static_file.md","articles":[]},{"title":"日志","level":"1.5.4","depth":2,"path":"ngx/nginx_log.md","ref":"ngx/nginx_log.md","articles":[]},{"title":"反向代理","level":"1.5.5","depth":2,"path":"ngx/reverse_proxy.md","ref":"ngx/reverse_proxy.md","articles":[]},{"title":"负载均衡","level":"1.5.6","depth":2,"path":"ngx/balancer.md","ref":"ngx/balancer.md","articles":[]},{"title":"陷阱和常见错误","level":"1.5.7","depth":2,"path":"ngx/pitfalls_and_common_mistakes.md","ref":"ngx/pitfalls_and_common_mistakes.md","articles":[]}]},"previous":{"title":"FFI","level":"1.4.12","depth":2,"path":"lua/FFI.md","ref":"lua/FFI.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"lua/what_jit.md","mtime":"2021-04-01T02:46:06.095Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-01T02:46:48.955Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

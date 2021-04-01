@@ -1,0 +1,2267 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>缓存失效风暴 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../lock.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    入门篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../base/web_evolution.html">
+            
+                <a href="../base/web_evolution.html">
+            
+                    
+                    Socket 编程发展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../base/intro.html">
+            
+                <a href="../base/intro.html">
+            
+                    
+                    OpenResty 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../lua/main.html">
+            
+                <a href="../lua/main.html">
+            
+                    
+                    Lua 入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../lua/brief.html">
+            
+                <a href="../lua/brief.html">
+            
+                    
+                    Lua 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../lua/build_env.html">
+            
+                <a href="../lua/build_env.html">
+            
+                    
+                    Lua 环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../lua/editor.html">
+            
+                <a href="../lua/editor.html">
+            
+                    
+                    Lua 编辑器选择
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../lua/class.html">
+            
+                <a href="../lua/class.html">
+            
+                    
+                    基础数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../lua/operator.html">
+            
+                <a href="../lua/operator.html">
+            
+                    
+                    表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../lua/control_structrues.html">
+            
+                <a href="../lua/control_structrues.html">
+            
+                    
+                    控制结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="../lua/if_else.html">
+            
+                <a href="../lua/if_else.html">
+            
+                    
+                    if/else
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" data-path="../lua/while.html">
+            
+                <a href="../lua/while.html">
+            
+                    
+                    while
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.3" data-path="../lua/repeat.html">
+            
+                <a href="../lua/repeat.html">
+            
+                    
+                    repeat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.4" data-path="../lua/for.html">
+            
+                <a href="../lua/for.html">
+            
+                    
+                    for
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.5" data-path="../lua/break.html">
+            
+                <a href="../lua/break.html">
+            
+                    
+                    break，return 和 goto
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../lua/function_descrip.html">
+            
+                <a href="../lua/function_descrip.html">
+            
+                    
+                    Lua 函数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.7.1" data-path="../lua/function_define.html">
+            
+                <a href="../lua/function_define.html">
+            
+                    
+                    函数的定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.2" data-path="../lua/function_parameter.html">
+            
+                <a href="../lua/function_parameter.html">
+            
+                    
+                    函数的参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.3" data-path="../lua/function_result.html">
+            
+                <a href="../lua/function_result.html">
+            
+                    
+                    函数返回值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.4" data-path="../lua/call_user_func_array.html">
+            
+                <a href="../lua/call_user_func_array.html">
+            
+                    
+                    全动态函数调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../lua/module.html">
+            
+                <a href="../lua/module.html">
+            
+                    
+                    模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../lua/string_library.html">
+            
+                <a href="../lua/string_library.html">
+            
+                    
+                    String 库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../lua/table_library.html">
+            
+                <a href="../lua/table_library.html">
+            
+                    
+                    Table 库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../lua/time_date_function.html">
+            
+                <a href="../lua/time_date_function.html">
+            
+                    
+                    日期时间函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../lua/math_library.html">
+            
+                <a href="../lua/math_library.html">
+            
+                    
+                    数学库函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../lua/file.html">
+            
+                <a href="../lua/file.html">
+            
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Lua 高阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../lua/metatable.html">
+            
+                <a href="../lua/metatable.html">
+            
+                    
+                    元表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../lua/object_oriented.html">
+            
+                <a href="../lua/object_oriented.html">
+            
+                    
+                    面向对象编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../lua/local.html">
+            
+                <a href="../lua/local.html">
+            
+                    
+                    局部变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../lua/array_size.html">
+            
+                <a href="../lua/array_size.html">
+            
+                    
+                    判断数组大小
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../lua/not_nil.html">
+            
+                <a href="../lua/not_nil.html">
+            
+                    
+                    非空判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../lua/re.html">
+            
+                <a href="../lua/re.html">
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../lua/dummy_var.html">
+            
+                <a href="../lua/dummy_var.html">
+            
+                    
+                    虚变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../lua/not_use_module.html">
+            
+                <a href="../lua/not_use_module.html">
+            
+                    
+                    抵制使用 module() 定义模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../lua/function_before_use.html">
+            
+                <a href="../lua/function_before_use.html">
+            
+                    
+                    调用代码前先定义函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../lua/dot_diff.html">
+            
+                <a href="../lua/dot_diff.html">
+            
+                    
+                    点号与冒号操作符的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../lua/module_is_evil.html">
+            
+                <a href="../lua/module_is_evil.html">
+            
+                    
+                    module 是邪恶的
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../lua/FFI.html">
+            
+                <a href="../lua/FFI.html">
+            
+                    
+                    FFI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../lua/what_jit.html">
+            
+                <a href="../lua/what_jit.html">
+            
+                    
+                    什么是 JIT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../ngx/nginx.html">
+            
+                <a href="../ngx/nginx.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../ngx/nginx_brief.html">
+            
+                <a href="../ngx/nginx_brief.html">
+            
+                    
+                    Nginx 新手起步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../ngx/nginx_local_pcre.html">
+            
+                <a href="../ngx/nginx_local_pcre.html">
+            
+                    
+                    location 匹配规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../ngx/static_file.html">
+            
+                <a href="../ngx/static_file.html">
+            
+                    
+                    静态文件服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../ngx/nginx_log.html">
+            
+                <a href="../ngx/nginx_log.html">
+            
+                    
+                    日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../ngx/reverse_proxy.html">
+            
+                <a href="../ngx/reverse_proxy.html">
+            
+                    
+                    反向代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../ngx/balancer.html">
+            
+                <a href="../ngx/balancer.html">
+            
+                    
+                    负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../ngx/pitfalls_and_common_mistakes.html">
+            
+                <a href="../ngx/pitfalls_and_common_mistakes.html">
+            
+                    
+                    陷阱和常见错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    OpenResty
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../openresty/install.html">
+            
+                <a href="../openresty/install.html">
+            
+                    
+                    环境搭建
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../openresty/install_on_windows.html">
+            
+                <a href="../openresty/install_on_windows.html">
+            
+                    
+                    Windows 平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../openresty/install_on_centos.html">
+            
+                <a href="../openresty/install_on_centos.html">
+            
+                    
+                    CentOS 平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../openresty/install_on_ubuntu.html">
+            
+                <a href="../openresty/install_on_ubuntu.html">
+            
+                    
+                    Ubuntu 平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="../openresty/install_osx.html">
+            
+                <a href="../openresty/install_osx.html">
+            
+                    
+                    Mac OS X 平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../openresty/helloworld.html">
+            
+                <a href="../openresty/helloworld.html">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../openresty/work_with_location.html">
+            
+                <a href="../openresty/work_with_location.html">
+            
+                    
+                    与其他 location 配合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../openresty/get_url_param.html">
+            
+                <a href="../openresty/get_url_param.html">
+            
+                    
+                    获取 uri 参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../openresty/get_req_body.html">
+            
+                <a href="../openresty/get_req_body.html">
+            
+                    
+                    获取请求 body
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../openresty/response.html">
+            
+                <a href="../openresty/response.html">
+            
+                    
+                    输出响应体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../openresty/log_response.html">
+            
+                <a href="../openresty/log_response.html">
+            
+                    
+                    日志输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../openresty/simple_api.html">
+            
+                <a href="../openresty/simple_api.html">
+            
+                    
+                    简单 API Server 框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../openresty/inline_var.html">
+            
+                <a href="../openresty/inline_var.html">
+            
+                    
+                    使用 Nginx 内置绑定变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../openresty/sub_request.html">
+            
+                <a href="../openresty/sub_request.html">
+            
+                    
+                    子查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../openresty/share_var.html">
+            
+                <a href="../openresty/share_var.html">
+            
+                    
+                    不同阶段共享变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../openresty/safe_sql.html">
+            
+                <a href="../openresty/safe_sql.html">
+            
+                    
+                    防止 SQL 注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../openresty/how_request_http.html">
+            
+                <a href="../openresty/how_request_http.html">
+            
+                    
+                    如何发起新 HTTP 请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../openresty/bit_brief.html">
+            
+                <a href="../openresty/bit_brief.html">
+            
+                    
+                    如何完成 bit 操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.14.1" data-path="../openresty/bit_two's_complement.html">
+            
+                <a href="../openresty/bit_two's_complement.html">
+            
+                    
+                    一，复习二进制补码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14.2" data-path="../openresty/bit_operations_review.html">
+            
+                <a href="../openresty/bit_operations_review.html">
+            
+                    
+                    二，复习位运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14.3" data-path="../openresty/bit_LuaJIT_BitOp_Api.html">
+            
+                <a href="../openresty/bit_LuaJIT_BitOp_Api.html">
+            
+                    
+                    三，LuaJIT 和 Lua BitOp Api
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14.4" data-path="../openresty/bit_bitwise_operation_example.html">
+            
+                <a href="../openresty/bit_bitwise_operation_example.html">
+            
+                    
+                    四，位运算算法实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14.5" data-path="../openresty/bit_bitop_installation.html">
+            
+                <a href="../openresty/bit_bitop_installation.html">
+            
+                    
+                    五，Lua BitOp 的安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    LuaRestyRedisLibrary
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../redis/auth_connect.html">
+            
+                <a href="../redis/auth_connect.html">
+            
+                    
+                    访问有授权验证的 Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../redis/select-keeplive.html">
+            
+                <a href="../redis/select-keeplive.html">
+            
+                    
+                    select+set_keepalive 组合操作引起的数据读写错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../redis/out_package.html">
+            
+                <a href="../redis/out_package.html">
+            
+                    
+                    redis 接口的二次封装（简化建连、拆连等细节）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../redis/pub_sub_package.html">
+            
+                <a href="../redis/pub_sub_package.html">
+            
+                    
+                    redis 接口的二次封装（发布订阅）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../redis/pipeline.html">
+            
+                <a href="../redis/pipeline.html">
+            
+                    
+                    pipeline 压缩请求数量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../redis/script.html">
+            
+                <a href="../redis/script.html">
+            
+                    
+                    script 压缩复杂请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../redis/dynamic_redis_module_method.html">
+            
+                <a href="../redis/dynamic_redis_module_method.html">
+            
+                    
+                    动态生成的 lua-resty-redis 模块方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../json.html">
+            
+                <a href="../json.html">
+            
+                    
+                    LuaCjsonLibrary
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../json/parse_exception.html">
+            
+                <a href="../json/parse_exception.html">
+            
+                    
+                    json 解析的异常捕获
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../json/sparse_array.html">
+            
+                <a href="../json/sparse_array.html">
+            
+                    
+                    稀疏数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../json/array_or_object.html">
+            
+                <a href="../json/array_or_object.html">
+            
+                    
+                    空 table 编码为 array 还是 object
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../postgres.html">
+            
+                <a href="../postgres.html">
+            
+                    
+                    PostgresNginxModule
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../postgres/how_to_use.html">
+            
+                <a href="../postgres/how_to_use.html">
+            
+                    
+                    调用方式简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../postgres/not_support_transaction.html">
+            
+                <a href="../postgres/not_support_transaction.html">
+            
+                    
+                    不支持事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../postgres/timeout.html">
+            
+                <a href="../postgres/timeout.html">
+            
+                    
+                    超时
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../postgres/health_check.html">
+            
+                <a href="../postgres/health_check.html">
+            
+                    
+                    健康监测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../postgres/sql_inject.html">
+            
+                <a href="../postgres/sql_inject.html">
+            
+                    
+                    SQL 注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../ngx_lua.html">
+            
+                <a href="../ngx_lua.html">
+            
+                    
+                    LuaNginxModule
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../ngx_lua/phase.html">
+            
+                <a href="../ngx_lua/phase.html">
+            
+                    
+                    执行阶段概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../ngx_lua/log.html">
+            
+                <a href="../ngx_lua/log.html">
+            
+                    
+                    正确的记录日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../ngx_lua/hot_load.html">
+            
+                <a href="../ngx_lua/hot_load.html">
+            
+                    
+                    热装载代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../ngx_lua/block_io.html">
+            
+                <a href="../ngx_lua/block_io.html">
+            
+                    
+                    阻塞操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../ngx_lua/cache.html">
+            
+                <a href="../ngx_lua/cache.html">
+            
+                    
+                    缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../ngx_lua/sleep.html">
+            
+                <a href="../ngx_lua/sleep.html">
+            
+                    
+                    sleep
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../ngx_lua/timer.html">
+            
+                <a href="../ngx_lua/timer.html">
+            
+                    
+                    定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../ngx_lua/allow_deny.html">
+            
+                <a href="../ngx_lua/allow_deny.html">
+            
+                    
+                    禁止某些终端访问
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../ngx_lua/continue_after_eof.html">
+            
+                <a href="../ngx_lua/continue_after_eof.html">
+            
+                    
+                    请求返回后继续执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.10" data-path="../ngx_lua/debug.html">
+            
+                <a href="../ngx_lua/debug.html">
+            
+                    
+                    调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="../ngx_lua/on_abort.html">
+            
+                <a href="../ngx_lua/on_abort.html">
+            
+                    
+                    请求中断后的处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.12" data-path="../ngx_lua/lua_opt.html">
+            
+                <a href="../ngx_lua/lua_opt.html">
+            
+                    
+                    我的 lua 代码需要调优么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.13" data-path="../ngx_lua/lua-variable-scope.html">
+            
+                <a href="../ngx_lua/lua-variable-scope.html">
+            
+                    
+                    变量的共享范围
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.14" data-path="../ngx_lua/lua-limit.html">
+            
+                <a href="../ngx_lua/lua-limit.html">
+            
+                    
+                    动态限速
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.15" data-path="../ngx_lua/shared_get_keys.html">
+            
+                <a href="../ngx_lua/shared_get_keys.html">
+            
+                    
+                    shared.dict 非队列性质
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.16" data-path="../ngx_lua/keepalive.html">
+            
+                <a href="../ngx_lua/keepalive.html">
+            
+                    
+                    正确使用长链接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.17" data-path="../ngx_lua/how_use_third_lib.html">
+            
+                <a href="../ngx_lua/how_use_third_lib.html">
+            
+                    
+                    如何引用第三方 resty 库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.18" data-path="../ngx_lua/use_case.html">
+            
+                <a href="../ngx_lua/use_case.html">
+            
+                    
+                    典型应用场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.19" data-path="../ngx_lua/whats_cosocket.html">
+            
+                <a href="../ngx_lua/whats_cosocket.html">
+            
+                    
+                    怎样理解 cosocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.20" data-path="../ngx_lua/how_one_instance_time.html">
+            
+                <a href="../ngx_lua/how_one_instance_time.html">
+            
+                    
+                    如何安全启动唯一实例的 timer 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.21" data-path="../ngx_lua/resolve_the_domain_name.html">
+            
+                <a href="../ngx_lua/resolve_the_domain_name.html">
+            
+                    
+                    如何正确的解析域名
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../dns/main.html">
+            
+                <a href="../dns/main.html">
+            
+                    
+                    LuaRestyDNSLibrary
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../dns/use_dynamic_dns.html">
+            
+                <a href="../dns/use_dynamic_dns.html">
+            
+                    
+                    使用动态 DNS 来完成 HTTP 请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../lock.html">
+            
+                <a href="../lock.html">
+            
+                    
+                    LuaRestyLock
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.12.1" data-path="cache-miss-storm.html">
+            
+                <a href="cache-miss-storm.html">
+            
+                    
+                    缓存失效风暴
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <span>
+            
+                    
+                    OpenResty 与 SSL
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../ssl/introduction.html">
+            
+                <a href="../ssl/introduction.html">
+            
+                    
+                    HTTPS 时代
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../ssl/certificate.html">
+            
+                <a href="../ssl/certificate.html">
+            
+                    
+                    动态加载证书和 OCSP stapling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../ssl/session_resumption.html">
+            
+                <a href="../ssl/session_resumption.html">
+            
+                    
+                    TLS session resumption
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../test.html">
+            
+                <a href="../test.html">
+            
+                    
+                    测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../test/static_analysis.html">
+            
+                <a href="../test/static_analysis.html">
+            
+                    
+                    代码静态分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../test/unittest.html">
+            
+                <a href="../test/unittest.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../test/coverage.html">
+            
+                <a href="../test/coverage.html">
+            
+                    
+                    代码覆盖率
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../test/apitest.html">
+            
+                <a href="../test/apitest.html">
+            
+                    
+                    API 测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="../test/performance_test.html">
+            
+                <a href="../test/performance_test.html">
+            
+                    
+                    性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="../test/ci.html">
+            
+                <a href="../test/ci.html">
+            
+                    
+                    持续集成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" data-path="../test/abtest.html">
+            
+                <a href="../test/abtest.html">
+            
+                    
+                    灰度发布
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.7.1" data-path="../test/1.md">
+            
+                <span>
+            
+                    
+                    分流引擎设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7.2" data-path="../test/2.md">
+            
+                <span>
+            
+                    
+                    控制台开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7.3" data-path="../test/3.md">
+            
+                <span>
+            
+                    
+                    向运维平台发展
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../web.html">
+            
+                <a href="../web.html">
+            
+                    
+                    Web 服务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../web/api.html">
+            
+                <a href="../web/api.html">
+            
+                    
+                    API 的设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../web/check_data_valid.html">
+            
+                <a href="../web/check_data_valid.html">
+            
+                    
+                    数据合法性检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../web/switch_protocol.html">
+            
+                <a href="../web/switch_protocol.html">
+            
+                    
+                    协议无痛升级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../web/code_style.html">
+            
+                <a href="../web/code_style.html">
+            
+                    
+                    代码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../web/conn_pool.html">
+            
+                <a href="../web/conn_pool.html">
+            
+                    
+                    连接池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../web/c10k.html">
+            
+                <a href="../web/c10k.html">
+            
+                    
+                    C10K 编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../web/time_wait.html">
+            
+                <a href="../web/time_wait.html">
+            
+                    
+                    TIME_WAIT 问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.8" data-path="../web/docker.html">
+            
+                <a href="../web/docker.html">
+            
+                    
+                    与 Docker 使用的网络瓶颈
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../flame_graph.html">
+            
+                <a href="../flame_graph.html">
+            
+                    
+                    火焰图
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../flame_graph/what.html">
+            
+                <a href="../flame_graph/what.html">
+            
+                    
+                    什么是火焰图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../flame_graph/when.html">
+            
+                <a href="../flame_graph/when.html">
+            
+                    
+                    什么时候使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../flame_graph/install.html">
+            
+                <a href="../flame_graph/install.html">
+            
+                    
+                    如何安装火焰图生成工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../flame_graph/how.html">
+            
+                <a href="../flame_graph/how.html">
+            
+                    
+                    如何定位问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../flame_graph/other.html">
+            
+                <a href="../flame_graph/other.html">
+            
+                    
+                    拓展阅读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../flame_graph/faq.html">
+            
+                <a href="../flame_graph/faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >缓存失效风暴</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7F13;&#x5B58;&#x5931;&#x6548;&#x98CE;&#x66B4;">&#x7F13;&#x5B58;&#x5931;&#x6548;&#x98CE;&#x66B4;</h1>
+<p>&#x770B;&#x4E0B;&#x8FD9;&#x4E2A;&#x6BB5;&#x4F2A;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-lua"><span class="hljs-keyword">local</span> value = get_from_cache(key)
+<span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> value <span class="hljs-keyword">then</span>
+    value = query_db(sql)
+    set_to_cache(value&#xFF0C; timeout &#xFF1D; <span class="hljs-number">100</span>)
+<span class="hljs-keyword">end</span>
+<span class="hljs-keyword">return</span> value
+</code></pre>
+<p>&#x770B;&#x4E0A;&#x53BB;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x5728;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E5F;&#x4E0D;&#x4F1A;&#x6709;&#x5F02;&#x5E38;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#xFF0C;&#x8FDB;&#x884C;&#x538B;&#x529B;&#x6D4B;&#x8BD5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x4F1A;&#x53D1;&#x73B0;&#xFF0C;&#x6BCF;&#x9694; 100 &#x79D2;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x7684;&#x67E5;&#x8BE2;&#x5C31;&#x4F1A;&#x51FA;&#x73B0;&#x4E00;&#x6B21;&#x5CF0;&#x503C;&#x3002;&#x5982;&#x679C;&#x4F60;&#x7684; cache &#x5931;&#x6548;&#x65F6;&#x95F4;&#x8BBE;&#x7F6E;&#x7684;&#x6BD4;&#x8F83;&#x957F;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x88AB;&#x53D1;&#x73B0;&#x7684;&#x673A;&#x7387;&#x5C31;&#x4F1A;&#x964D;&#x4F4E;&#x3002;</p>
+<p>&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x51FA;&#x73B0;&#x5CF0;&#x503C;&#x5462;&#xFF1F;&#x60F3;&#x8C61;&#x4E00;&#x4E0B;&#xFF0C;&#x5728; cache &#x5931;&#x6548;&#x7684;&#x77AC;&#x95F4;&#xFF0C;&#x5982;&#x679C;&#x5E76;&#x53D1;&#x8BF7;&#x6C42;&#x6709; 1000 &#x6761;&#x540C;&#x65F6;&#x5230;&#x4E86; <code>query_db(sql)</code> &#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4F1A;&#x600E;&#x6837;&#xFF1F;&#x6CA1;&#x9519;&#xFF0C;&#x4F1A;&#x6709; 1000 &#x4E2A;&#x8BF7;&#x6C42;&#x6253;&#x5411;&#x6570;&#x636E;&#x5E93;&#x3002;&#x8FD9;&#x5C31;&#x662F;&#x7F13;&#x5B58;&#x5931;&#x6548;&#x77AC;&#x95F4;&#x5F15;&#x8D77;&#x7684;&#x98CE;&#x66B4;&#x3002;&#x5B83;&#x6709;&#x4E00;&#x4E2A;&#x82F1;&#x6587;&#x540D;&#xFF0C;&#x53EB; <strong>&quot;dog-pile effect&quot;</strong>&#x3002;</p>
+<p>&#x600E;&#x4E48;&#x89E3;&#x51B3;&#xFF1F;&#x81EA;&#x7136;&#x7684;&#x60F3;&#x6CD5;&#x662F;&#x53D1;&#x73B0;&#x7F13;&#x5B58;&#x5931;&#x6548;&#x540E;&#xFF0C;&#x52A0;&#x4E00;&#x628A;&#x9501;&#x6765;&#x63A7;&#x5236;&#x6570;&#x636E;&#x5E93;&#x7684;&#x8BF7;&#x6C42;&#x3002;&#x5177;&#x4F53;&#x7684;&#x7EC6;&#x8282;&#xFF0C;&#x6625;&#x54E5;&#x5728; lua-resty-lock &#x7684;&#x6587;&#x6863;&#x91CC;&#x9762;&#x505A;&#x4E86;&#x8BE6;&#x7EC6;&#x7684;&#x8BF4;&#x660E;&#xFF0C;&#x6211;&#x5C31;&#x4E0D;&#x91CD;&#x590D;&#x4E86;&#xFF0C;&#x8BF7;&#x770B;<a href="https://github.com/openresty/lua-resty-lock#for-cache-locks" target="_blank">&#x8FD9;&#x91CC;</a>&#x3002;&#x591A;&#x8BF4;&#x4E00;&#x53E5;&#xFF0C;lua-resty-lock &#x5E93;&#x672C;&#x8EAB;&#x5DF2;&#x7ECF;&#x66FF;&#x4F60;&#x5B8C;&#x6210;&#x4E86; wait for lock &#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x770B;&#x4EE3;&#x7801;&#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x4E0B;&#x8FD9;&#x4E2A;&#x7EC6;&#x8282;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../lock.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: LuaRestyLock">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"缓存失效风暴","level":"1.12.1","depth":2,"next":{"title":"OpenResty 与 SSL","level":"1.13","depth":1,"ref":"","articles":[{"title":"HTTPS 时代","level":"1.13.1","depth":2,"path":"ssl/introduction.md","ref":"ssl/introduction.md","articles":[]},{"title":"动态加载证书和 OCSP stapling","level":"1.13.2","depth":2,"path":"ssl/certificate.md","ref":"ssl/certificate.md","articles":[]},{"title":"TLS session resumption","level":"1.13.3","depth":2,"path":"ssl/session_resumption.md","ref":"ssl/session_resumption.md","articles":[]}]},"previous":{"title":"LuaRestyLock","level":"1.12","depth":1,"path":"lock.md","ref":"lock.md","articles":[{"title":"缓存失效风暴","level":"1.12.1","depth":2,"path":"lock/cache-miss-storm.md","ref":"lock/cache-miss-storm.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"lock/cache-miss-storm.md","mtime":"2021-04-01T02:46:06.095Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-01T02:46:48.955Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

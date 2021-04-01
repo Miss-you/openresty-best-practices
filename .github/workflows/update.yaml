@@ -57,12 +57,9 @@ jobs:
       run: |
         git config --global user.email "${MYEMAIL}"
         git config --global user.name "${MYNAME}"
-        git remote add upstream https://github.com/moonbingbing/openresty-best-practices.git
-        git fetch upstream 
-        git checkout -b tmp-master upstream/master
-        git fetch origin
-        git checkout -b master origin/master
-        git merge tmp-master
-        git commit -m "Updated By Github Actions With Build ${{github.run_number}} of ${{github.workflow}} For Github Pages"
+        git checkout -b moonbingbing-master master
+        git pull git://github.com/moonbingbing/openresty-best-practices.git master
+        git checkout master
+        git merge --no-ff moonbingbing-master
         git push "https://${TOKEN}@${REF}"
 
